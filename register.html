@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Unified Anime Gateway</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0e14;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .register-container {
+            background-color: #1a1d23;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            width: 400px;
+            border-top: 4px solid #00aaff;
+        }
+        h2 { text-align: center; color: #00aaff; margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.2rem; }
+        label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: #bbb; }
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 6px;
+            border: 1px solid #333;
+            background: #252830;
+            color: white;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input:focus { outline: none; border-color: #00aaff; }
+        .btn-register {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #00aaff;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+        .btn-register:hover { background-color: #0088cc; }
+        .footer-links { margin-top: 1.5rem; text-align: center; font-size: 0.85rem; color: #888; }
+        .footer-links a { color: #00aaff; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Create Account</h2>
+        <p style="text-align: center; font-size: 0.8rem; color: #888; margin-bottom: 1.5rem;">
+            Join the Unified Anime Distribution Gateway
+        </p>
+        
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Required for verification" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="btn-register">Register</button>
+        </form>
+
+        <div class="footer-links">
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
